@@ -1,3 +1,5 @@
+.images/
+images/
 .env
 .env.local
 .env.*
