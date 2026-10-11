@@ -21,3 +21,5 @@ data/raw_x.csv
 data/raw_y.csv
 data/df_clean.csv
 data/raw_df.csv
+artifacts/
+.conda/

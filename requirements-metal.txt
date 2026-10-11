@@ -1,0 +1,16 @@
+# Environnement Apple Silicon dédié au GPU Metal.
+# À installer séparément de requirements-image.txt.
+tensorflow-macos==2.16.2
+tensorflow-metal==1.2.0
+numpy>=1.26,<2
+pandas>=2.1,<3
+scikit-learn>=1.4,<2
+matplotlib>=3.8,<4
+seaborn>=0.13,<1
+Pillow>=10,<12
+ImageHash>=4.3,<5
+opencv-python-headless>=4.9,<5
+tqdm>=4.66,<5
+jupyterlab>=4,<5
+ipykernel>=6.29,<7
+certifi>=2024.2
