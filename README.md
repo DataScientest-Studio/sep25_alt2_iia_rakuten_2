@@ -7,9 +7,16 @@ Ce dépôt explore la prédiction du code produit `prdtypecode` à partir du tex
 Les nouveaux notebooks sont dans `notebooks/image_classification/` et doivent être exécutés dans cet ordre :
 
 1. `00_preparer_donnees_et_splits.ipynb` — audit, doublons et split groupé ;
-2. `01_entrainer_efficientnet_baseline.ipynb` — baseline EfficientNetB0 ;
-3. `02_entrainer_efficientnet_clahe.ipynb` — expérience CLAHE conditionnelle ;
-4. `03_evaluer_comparer_et_predire.ipynb` — comparaison, analyse des erreurs et prédiction test.
+2. `01_cnn_from_scratch.ipynb` — baseline : CNN entraîné de zéro ;
+3. `02_transfer_learning_efficientnet.ipynb` — amélioration : EfficientNetB0 gelé (feature extraction)
+   puis fine-tuné, chaque étape sauvegardée et évaluée ;
+4. `03_evaluer_comparer_et_predire.ipynb` — progression baseline → transfert, analyse par classe,
+   confusions, erreurs et prédiction test ;
+5. `04_interpretabilite_gradcam.ipynb` — cartes Grad-CAM comparées et test de fidélité par masquage.
+
+Les notebooks sont générés par `tools/build_image_classification_notebooks.py`. Le script n'écrase pas
+un notebook déjà exécuté, sauf avec `--force`. Le premier parcours (EfficientNet seul et ablation CLAHE)
+est conservé avec ses résultats dans `notebooks/image_classification/archive_v1/`.
 
 Installation recommandée dans un environnement Python isolé :
 
